@@ -75,7 +75,7 @@ $border-purple-600: #805ad5;
 .card {
   @apply grid bg-white p-4 border-b border-gray-300;
   border-left: solid 4px transparent;
-  grid-template-columns: max-content max-content 1fr max-content;
+  grid-template-columns: repeat(2, max-content) 1fr max-content;
   grid-template-areas:
     "title     title     title    new"
     "location  location  company  ."
