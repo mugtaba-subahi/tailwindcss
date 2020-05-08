@@ -77,11 +77,11 @@ $border-purple-600: #805ad5;
   border-left: solid 4px transparent;
   grid-template-columns: repeat(2, max-content) 1fr max-content;
   grid-template-areas:
-    "title     title     title    new"
-    "location  location  company  ."
-    "list      list      actions  actions"
-    "list      list      actions  actions"
-    "list      list      actions  actions"
+    "title     title     title    new     "
+    "location  location  location location"
+    "list      list      actions  actions "
+    "list      list      actions  actions "
+    "list      list      actions  actions "
     "date      date      .        .";
 
   &:hover {
@@ -104,12 +104,8 @@ $border-purple-600: #805ad5;
   grid-area: location;
 }
 
-.company {
-  grid-area: company;
-}
-
 .date {
-  @apply text-gray-600;
+  @apply text-gray-600 text-sm;
   grid-area: date;
 }
 
