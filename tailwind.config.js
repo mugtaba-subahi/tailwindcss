@@ -1,5 +1,9 @@
 module.exports = {
-  theme: {},
+  theme: {
+    maxWidth: {
+      content: 'max-content',
+    },
+  },
   variants: {},
   plugins: [],
 };
