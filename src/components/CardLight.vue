@@ -34,9 +34,9 @@
     </ul>
 
     <div class="actions">
-      <span class="actions__action actions__action--save">
+      <div class="actions__action actions__action--save">
         <span class="actions__text-container">
-          <p>Save</p>
+          <p class="actions__text">Save</p>
         </span>
         <span class="actions__icon-container">
           <svg class="actions__icon actions__icon--heart" viewBox="0 0 24 24">
@@ -45,20 +45,18 @@
             />
           </svg>
         </span>
-      </span>
-
-      <div class="actions">
-        <span class="actions__action actions__action--apply">
-          <span class="actions__text-container">
-            <p>Apply</p>
-          </span>
-          <span class="actions__icon-container">
-            <svg class="actions__icon actions__icon--paperplane" viewBox="0 0 24 24">
-              <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
-            </svg>
-          </span>
-        </span>
       </div>
+
+      <span class="actions__action actions__action--apply">
+        <span class="actions__text-container">
+          <p class="actions__text">Apply</p>
+        </span>
+        <span class="actions__icon-container">
+          <svg class="actions__icon actions__icon--paperplane" viewBox="0 0 24 24">
+            <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+          </svg>
+        </span>
+      </span>
     </div>
 
     <p class="date">Posted 14 December 2016</p>
@@ -70,8 +68,10 @@ export default {};
 </script>
 
 <style lang="postcss" scoped>
+$border-purple-600: #805ad5;
+
 .card {
-  @apply grid bg-gray-900 p-4 border-b border-gray-800;
+  @apply grid bg-white p-4 border-b border-gray-300;
   border-left: solid 4px transparent;
   grid-template-columns: repeat(2, max-content) 1fr max-content;
   grid-template-areas:
@@ -80,15 +80,15 @@ export default {};
     "list      list      actions  actions "
     "list      list      actions  actions "
     "list      list      actions  actions "
-    "date      date      date        date";
+    "date      date      date     date    ";
 
   &:hover {
-    /* @apply bg-gray-800; */
-    border-left: solid 4px theme("colors.purple.600");
+    @apply bg-gray-100;
+    border-left: solid 4px $border-purple-600;
   }
 }
 .title {
-  @apply font-semibold text-gray-100;
+  @apply font-semibold;
   grid-area: title;
 }
 
@@ -98,7 +98,7 @@ export default {};
 }
 
 .location {
-  @apply mb-4 text-gray-500;
+  @apply mb-4;
   grid-area: location;
 }
 
@@ -112,11 +112,11 @@ export default {};
   grid-area: list;
 
   &__item {
-    @apply flex mb-1 text-gray-500;
+    @apply flex mb-1 text-gray-700;
   }
 
   &__icon {
-    @apply w-5 fill-current text-blue-500 mr-2;
+    @apply w-5 fill-current text-blue-400 mr-2;
   }
 }
 
@@ -126,7 +126,7 @@ export default {};
   align-self: center;
 
   &__action {
-    @apply flex rounded border border-gray-800 bg-gray-800 h-10 shadow-sm;
+    @apply flex rounded bg-white border h-10;
 
     &--save {
       @apply mb-2;
@@ -139,24 +139,22 @@ export default {};
   }
 
   &__text-container {
-    @apply w-20 text-gray-500;
+    @apply w-20;
   }
 
   &__icon-container {
-    @apply w-10 bg-gray-800 rounded-r border-gray-700;
+    @apply w-10 bg-gray-100 border-l border-gray-300 rounded-r;
   }
 
   &__icon {
     @apply fill-current w-4;
 
     &--heart {
-      /* @apply text-pink-700; */
-      @apply text-gray-600;
+      @apply text-pink-600;
     }
 
     &--paperplane {
       @apply text-blue-600;
-      /* @apply text-gray-600; */
     }
   }
 }

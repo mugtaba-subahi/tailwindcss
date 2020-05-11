@@ -1,7 +1,8 @@
+const colors = require('material-ui-colors');
 module.exports = {
   theme: {
-    maxWidth: {
-      content: 'max-content',
+    extend: {
+      colors: { ...colors },
     },
   },
   variants: {},
