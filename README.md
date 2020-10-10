@@ -1,4 +1,4 @@
-# salah-vuejs3
+# salah-vue3
 
 ## Project setup
 ```
